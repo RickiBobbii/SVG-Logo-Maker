@@ -1,8 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Circle = require('./lib/shapes');
-const Triangle = require('./lib/shapes');
-const Square = require('./lib/shapes');
+const {Circle, Triangle, Square} = require('./lib/shapes');
+
 
 inquirer
     .prompt([
@@ -32,7 +31,11 @@ inquirer
         }
     ])
     .then((answers) => {
-        const logoSvg =
+        //const circle = new Circle().render();
+        const triangle = new Triangle().render();
+        //const square = new Square().render();
+
+        const logoSvg = 
         `<!DOCTYPE html>
         <html lang="en">
         <body>
@@ -42,8 +45,8 @@ inquirer
             <p>${answers.shapeColor}</p>
         <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
-        <${answers.shape} cx="150" cy="100" r="80" fill="${answers.shapeColor}" />
-      
+        ${triangle}
+        
         <text x="150" y="125" font-size="60" text-anchor="middle" fill="${answers.textColor}">${answers.title}</text>
       
       </svg>
