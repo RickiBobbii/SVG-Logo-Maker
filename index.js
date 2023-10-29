@@ -31,27 +31,17 @@ inquirer
         }
     ])
     .then((answers) => {
-        //const circle = new Circle().render();
+        const circle = new Circle().render();
         const triangle = new Triangle().render();
-        //const square = new Square().render();
+        const square = new Square().render();
 
+        //Renders the SVG Logo
         const logoSvg = 
-        `<!DOCTYPE html>
-        <html lang="en">
-        <body>
-            <p>${answers.title}</p>
-            <p>${answers.textColor}</p>
-            <p>${answers.shape}</p>
-            <p>${answers.shapeColor}</p>
-        <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-
-        ${triangle}
-        
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="${answers.textColor}">${answers.title}</text>
-      
-      </svg>
-        </body>
-        </html>`;
+        `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    ${triangle} fill="${answers.shapeColor}" />
+    <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="${answers.textColor}">${answers.title}</text>
+</svg>`;
+    //writes a file for the SVG logo    
     fs.writeFile('./logo.svg', logoSvg, (err) => {
         if (err) throw (err);
             console.log('Generated logo.svg');
