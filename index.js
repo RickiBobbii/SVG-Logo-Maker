@@ -34,14 +34,25 @@ inquirer
         const circle = new Circle().render();
         const triangle = new Triangle().render();
         const square = new Square().render();
+        
+        //selects correct shape from user input
+        let usershape;
+        if((answers.shape) === 'circle') {
+            usershape = circle;
+        }else if ((answers.shape) === 'triangle') {
+            usershape = triangle;
+        } else if ((answers.shape) === 'square') {
+            usershape = square;
+        }
 
         //Renders the SVG Logo
         const logoSvg = 
         `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    ${triangle} fill="${answers.shapeColor}" />
+    ${usershape} fill="${answers.shapeColor}" />
     <text x="50%" y="50%" font-size="60" text-anchor="middle" fill="${answers.textColor}">${answers.title}</text>
 </svg>`;
-    //writes a file for the SVG logo    
+    
+//writes a file for the SVG logo    
     fs.writeFile('./logo.svg', logoSvg, (err) => {
         if (err) throw (err);
             console.log('Generated logo.svg');
