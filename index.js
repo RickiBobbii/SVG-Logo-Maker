@@ -7,13 +7,13 @@ inquirer
     .prompt([
         {
             type: 'input',
-            message: 'Enter upto 3 characters. ',
+            message: 'Enter up to 3 characters. ',
             name: 'title',
-            validate: (input)=>{ if(input){return true} else {return 'Please input a value to continue.'}},
+            validate: (input)=>{ if(input && (input.length < 4)){return true} else {return 'Please enter up to 3 characters to continue.'}},
         },
         {
             type: 'input',
-            message: 'What text color would you like? (blue, red, orange, green) ',
+            message: 'What TEXT color would you like? (blue, red, orange, green, etc.) ',
             name: 'textColor',
             validate: (input)=>{ if(input){return true} else {return 'Please input a value to continue.'}},
         },
@@ -25,7 +25,7 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What shape color would you like? (blue, red, orange, green) ',
+            message: 'What SHAPE color would you like? (blue, red, orange, green, etc.) ',
             name: 'shapeColor',
             validate: (input)=>{ if(input){return true} else {return 'Please input a value to continue.'}},
         }
