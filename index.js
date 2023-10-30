@@ -13,9 +13,9 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What TEXT color would you like? (blue, red, orange, green, etc.) ',
+            message: 'What TEXT COLOR would you like? (blue, red, green, etc., or hexidecimal number) ',
             name: 'textColor',
-            validate: (input)=>{ if(input){return true} else {return 'Please input a value to continue.'}},
+            validate: (input)=>{ if(input){return true} else {return 'Please input a color to continue.'}},
         },
         {
             type: 'list',
@@ -25,9 +25,9 @@ inquirer
         },
         {
             type: 'input',
-            message: 'What SHAPE color would you like? (blue, red, orange, green, etc.) ',
+            message: 'What SHAPE COLOR would you like? (blue, red, green, etc., or hexidecimal number) ',
             name: 'shapeColor',
-            validate: (input)=>{ if(input){return true} else {return 'Please input a value to continue.'}},
+            validate: (input)=>{ if(input){return true} else {return 'Please input a color to continue.'}},
         }
     ])
     .then((answers) => {
