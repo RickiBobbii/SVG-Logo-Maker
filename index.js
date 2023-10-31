@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const {Circle, Triangle, Square} = require('./lib/shapes');
 
-
+//prompt user to enter a title, textColor, shape, and shapeColor
 inquirer
     .prompt([
         {
