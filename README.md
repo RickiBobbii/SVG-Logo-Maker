@@ -41,7 +41,7 @@ Once your installations are complete, run "node index.js" from the command line,
 ![](./examples/circle-example.svg)
 
 ### Video Walkthrough
-  - [Click here]()
+  - [Click here](https://drive.google.com/file/d/1lrfKIRGqv8fIGT6PVCYPYWoIsWs2d8IW/view)
 
 ## Credits
 
