@@ -33,7 +33,8 @@ This application allows the user to generate a simple logo for their projects in
 
 ## Usage
 
-Once your installations are complete, run "node index.js" from the command line, make sure you are in the directory you want to run the file from. Answer the prompts and your new SVG logo will be generated under the file name 'logo.svg'.
+Once your installations are complete, run "node index.js" from the command line, make sure you are in the directory you want to run the file from. Answer the prompts by entering up to 3 characters, a text color, a shape, and a shape color (both colors can be a color keyword or hexidecimal number). Your new SVG logo will be generated under the file name 'logo.svg'. 
+- To view logo, either copy path and paste into browser or download an SVG viewer extension in Visual Studio Code.
 
 ## Example
 
